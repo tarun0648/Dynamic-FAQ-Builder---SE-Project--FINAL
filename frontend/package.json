@@ -1,0 +1,158 @@
+{
+  "name": "dynamic-faq-builder",
+  "version": "1.0.0",
+  "description": "Dynamic FAQ Builder with AI-powered search and admin management",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server/api.js",
+    "server:dev": "nodemon server/api.js",
+    "test": "vitest",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .js,.jsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --ext .js,.jsx --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,css}\"",
+    "security": "npm audit --audit-level=high",
+    "ci": "npm run lint && npm run test:coverage && npm run build"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@google/generative-ai": "^0.17.0",
+    "@mui/icons-material": "^7.3.5",
+    "@mui/material": "^7.3.5",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "date-fns": "^3.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.2.1",
+    "express-validator": "^7.3.0",
+    "firebase": "^10.7.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-router-dom": "^6.20.0",
+    "react-toastify": "^11.0.5"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^1.6.1",
+    "@vitest/ui": "^1.6.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "jsdom": "^27.1.0",
+    "nodemon": "^3.1.10",
+    "postcss": "^8.4.32",
+    "prettier": "^3.1.1",
+    "tailwindcss": "^3.3.6",
+    "vite": "^5.0.8",
+    "vitest": "^1.6.1"
+  },
+  "serverDependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "express-validator": "^7.0.1",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2024,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "es2024": true,
+      "node": true
+    },
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "warn",
+      "no-unused-vars": "warn",
+      "no-console": "warn"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false
+  },
+  "vitest": {
+    "globals": true,
+    "environment": "jsdom",
+    "setupFiles": "./src/test/setup.js",
+    "coverage": {
+      "provider": "v8",
+      "reporter": [
+        "text",
+        "json",
+        "html"
+      ],
+      "exclude": [
+        "node_modules/",
+        "src/test/",
+        "*.config.js"
+      ],
+      "lines": 75,
+      "functions": 75,
+      "branches": 75,
+      "statements": 75
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tesseract/dynamic-faq-builder"
+  },
+  "keywords": [
+    "faq",
+    "search",
+    "ai",
+    "gemini",
+    "react",
+    "firebase",
+    "bm25",
+    "relevance-ranking"
+  ],
+  "author": "Tesseract Team",
+  "license": "MIT"
+}
