@@ -32,10 +32,6 @@ This repository contains the source code and documentation for the Dynamic FAQ B
 - [@prakasheeralli](https://github.com/prakasheeralli)
 
 
-## 🚀 Getting Started
-
-### Prerequisites
-- [List your prerequisites here]
 
 ### Installation
 1. Clone the repository
